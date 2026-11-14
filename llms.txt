@@ -17,6 +17,7 @@
 - Weather nudges (optional, off by default): Open-Meteo forecast for the approximate location; freeze at or below 32°F (check tire pressure), heat at or above 95°F (check coolant and battery). Location is never stored
 - Data that leaves the phone: VIN to NHTSA vPIC (to decode), make/model/year to NHTSA Recalls, approximate location to Open-Meteo (only if weather nudges are on). Nothing goes to an AutoEase server; there isn't one
 - Backup: on by default, automatic to the user's own iCloud (iPhone) or Google Drive app folder (Android, drive.appdata scope only, after the user links Drive once), plus export/import of a backup file. Free. On a new phone, "Restore from a backup" on the first screen restores without adding the car first
+- Remove a car: tap the car's name on the Garage, then Remove this car. Deletes it and its history from the phone; a restore doesn't bring it back. Free
 - Display: Light, Dark or System appearance
 - Support: autoease-support@lixlink.com
 
