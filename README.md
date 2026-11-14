@@ -44,7 +44,7 @@ Custom domain (manual, account owner):
 `.github/workflows/check.yml` runs [lychee](https://github.com/lycheeverse/lychee) on every PR and push to `main` and fails on a broken internal link, image or `#anchor`. It also checks that FAQPage JSON-LD matches the visible FAQ. Locally:
 
 ```
-lychee --offline --root-dir "$PWD" --index-files index.html --include-fragments '*.html'
+lychee --offline --root-dir "$PWD" --index-files index.html --include-fragments '**/*.html'
 ```
 
 Dependabot opens a monthly PR to bump GitHub Actions versions.

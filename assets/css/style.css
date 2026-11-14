@@ -223,7 +223,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 /* ---------- Sections ---------- */
 
 section { padding: 88px 0; }
-section[id] { scroll-margin-top: 72px; }
+section[id], details[id], h2[id], h3[id] { scroll-margin-top: 80px; }
 .section-head { max-width: 680px; margin-bottom: 44px; }
 .section-head p { color: var(--ink-muted); font-size: 1.1rem; margin: 0; }
 .dark .section-head p { color: var(--on-dark-muted); }
@@ -401,7 +401,8 @@ footer { background: var(--asphalt); color: var(--on-dark-muted); padding: 48px 
   border: 1px solid var(--asphalt-line); background: var(--asphalt); color: var(--on-dark);
   display: grid; place-items: center; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.2s;
 }
-.to-top.visible { opacity: 1; pointer-events: auto; }
+.to-top { visibility: hidden; transition: opacity 0.2s, visibility 0.2s; }
+.to-top.visible { opacity: 1; pointer-events: auto; visibility: visible; }
 
 /* Grid children default to min-width:auto, which lets a wide table push the page sideways. */
 .two-col > *, .band-inner > *, .hero-inner > *, .faq-layout > * { min-width: 0; }

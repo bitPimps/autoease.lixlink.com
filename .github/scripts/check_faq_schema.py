@@ -16,7 +16,8 @@ for path in sorted(glob.glob("**/*.html", recursive=True)):
     schema = []
     for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', src, re.S):
         data = json.loads(block)
-        for node in data.get("@graph", [data]):
+        nodes = data if isinstance(data, list) else data.get("@graph", [data])
+        for node in nodes:
             if node.get("@type") == "FAQPage":
                 schema += [(q["name"], q["acceptedAnswer"]["text"]) for q in node["mainEntity"]]
     if not schema:

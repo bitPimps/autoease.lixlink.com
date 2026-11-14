@@ -299,7 +299,7 @@
           "name": "How does AutoEase check for recalls?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every time you open the dashboard, AutoEase checks the U.S. government’s NHTSA recall database for your car’s make, model and year, and shows a banner if there are any. It checks live each time, so the result is never out of date."
+            "text": "When you open AutoEase, it checks the U.S. government’s NHTSA recall database for your car’s make, model and year, and shows a banner if there are any. It’s a live check, not a saved list. To check again, close AutoEase fully and reopen it."
           }
         },
         {
@@ -315,7 +315,7 @@
           "name": "My car’s recall was already fixed. How do I clear the banner?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tap the recall banner and tap Mark as fixed on that recall. It moves to a Fixed section, and the banner counts only open recalls. Tap Undo if you marked the wrong one."
+            "text": "Tap the recall banner and tap Mark as fixed on that recall. It moves to a Fixed section, and the banner counts only open recalls. If you marked the wrong one, tap Undo before you close the list: once no open recalls are left, the banner goes away."
           }
         },
         {
@@ -347,7 +347,7 @@
           "name": "How do I clear a weather alert?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tap the weather banner and tap Done on the alert. It moves to a Done section, and you can tap Undo to bring it back."
+            "text": "Tap the weather banner and tap Done on the alert. It moves to a Done section. To bring it back, tap Undo before you close the list: once no open alerts are left, the banner goes away."
           }
         },
         {
@@ -379,7 +379,7 @@
           "name": "How do I restore my data?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On a new phone, tap Restore from a backup on the first screen, under Get started. You don’t need to add your car first. On Android, link the same Google account; on iPhone, use the same iCloud account. Then tap Restore from backup. When your car comes back, AutoEase opens your Garage. On a phone that already has AutoEase, go to settings (gear) → Backup and tap Restore from backup. Restoring adds what’s in your backup and keeps the history on this phone. If this phone has an empty copy of the same car, with nothing logged, AutoEase replaces it with the restored car."
+            "text": "On a new phone, tap Restore from a backup on the first screen, under Get started. You don’t need to add your car first. On Android, link the same Google account; on iPhone, use the same iCloud account. Then tap Restore from backup. When your car comes back, AutoEase asks about notifications if it hasn’t yet, then opens your Garage. On a phone that already has AutoEase, go to settings (gear) → Backup and tap Restore from backup. Restoring adds what’s in your backup and keeps the history on this phone. If this phone has an empty copy of the same car, with nothing logged, AutoEase replaces it with the restored car."
           }
         },
         {
@@ -411,7 +411,7 @@
           "name": "Where is my data stored?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On your phone, and in your own iCloud or Google Drive if you turn on backup. AutoEase has no accounts and no server that holds your data."
+            "text": "On your phone, and in your own iCloud or Google Drive if you turn on backup. AutoEase has no accounts and no server that holds your data. On Android, if your phone’s own Google backup is on, Android may also save AutoEase’s data with the rest of your phone and bring it back when you reinstall or set up a new phone."
           }
         },
         {
@@ -435,7 +435,7 @@
           "name": "How do I delete my data?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Uninstalling AutoEase deletes everything it stored on your phone. A cloud backup stays in your iCloud or Google Drive until you delete it there. See Delete your AutoEase data."
+            "text": "Uninstalling AutoEase deletes everything it stored on your phone. On Android, if your phone’s own Google backup is on, Android may also save AutoEase’s data with the rest of your phone and bring it back when you reinstall or set up a new phone. A cloud backup stays in your iCloud or Google Drive until you delete it there. See Delete your AutoEase data."
           }
         },
         {
@@ -459,7 +459,7 @@
           "name": "I don’t see a recall banner. Is the check working?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No banner means AutoEase found no recalls for your car’s make, model and year, or it couldn’t connect. Open the app again when you have a signal."
+            "text": "No banner means AutoEase found no recalls for your car’s make, model and year, or it couldn’t connect, or you’ve marked every recall as fixed. If you were offline, close AutoEase fully and reopen it when you have a signal."
           }
         },
         {
@@ -467,7 +467,7 @@
           "name": "My mileage won’t save.",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Enter a whole number between 0 and 1,000,000, with no commas or decimals."
+            "text": "The new reading must be the same as or higher than your current mileage, up to 1,000,000. Odometers only count up, so AutoEase doesn’t accept a lower number. If you entered a reading that was too high by mistake, email support and we’ll help."
           }
         },
         {
@@ -763,7 +763,7 @@
           <details class="faq-item" id="recall-check">
             <summary>How does AutoEase check for recalls?</summary>
             <div class="faq-answer">
-              <p>Every time you open the dashboard, AutoEase checks the U.S. government’s NHTSA recall database for your car’s make, model and year, and shows a banner if there are any. It checks live each time, so the result is never out of date.</p>
+              <p>When you open AutoEase, it checks the U.S. government’s NHTSA recall database for your car’s make, model and year, and shows a banner if there are any. It’s a live check, not a saved list. To check again, close AutoEase fully and reopen it.</p>
             </div>
           </details>
           <details class="faq-item" id="recall-applies">
@@ -775,7 +775,7 @@
           <details class="faq-item" id="recall-fixed">
             <summary>My car’s recall was already fixed. How do I clear the banner?</summary>
             <div class="faq-answer">
-              <p>Tap the recall banner and tap Mark as fixed on that recall. It moves to a Fixed section, and the banner counts only open recalls. Tap Undo if you marked the wrong one.</p>
+              <p>Tap the recall banner and tap Mark as fixed on that recall. It moves to a Fixed section, and the banner counts only open recalls. If you marked the wrong one, tap Undo before you close the list: once no open recalls are left, the banner goes away.</p>
             </div>
           </details>
           <details class="faq-item" id="recall-cost">
@@ -802,7 +802,7 @@
           <details class="faq-item" id="weather-done">
             <summary>How do I clear a weather alert?</summary>
             <div class="faq-answer">
-              <p>Tap the weather banner and tap Done on the alert. It moves to a Done section, and you can tap Undo to bring it back.</p>
+              <p>Tap the weather banner and tap Done on the alert. It moves to a Done section. To bring it back, tap Undo before you close the list: once no open alerts are left, the banner goes away.</p>
             </div>
           </details>
           <details class="faq-item" id="location">
@@ -829,7 +829,7 @@
           <details class="faq-item" id="restore">
             <summary>How do I restore my data?</summary>
             <div class="faq-answer">
-              <p>On a new phone, tap Restore from a backup on the first screen, under Get started. You don’t need to add your car first. On Android, link the same Google account; on iPhone, use the same iCloud account. Then tap Restore from backup. When your car comes back, AutoEase opens your Garage.</p><p>On a phone that already has AutoEase, go to settings (gear) → Backup and tap Restore from backup. Restoring adds what’s in your backup and keeps the history on this phone. If this phone has an empty copy of the same car, with nothing logged, AutoEase replaces it with the restored car.</p>
+              <p>On a new phone, tap Restore from a backup on the first screen, under Get started. You don’t need to add your car first. On Android, link the same Google account; on iPhone, use the same iCloud account. Then tap Restore from backup. When your car comes back, AutoEase asks about notifications if it hasn’t yet, then opens your Garage.</p><p>On a phone that already has AutoEase, go to settings (gear) → Backup and tap Restore from backup. Restoring adds what’s in your backup and keeps the history on this phone. If this phone has an empty copy of the same car, with nothing logged, AutoEase replaces it with the restored car.</p>
             </div>
           </details>
           <details class="faq-item" id="backup-file">
@@ -856,7 +856,7 @@
           <details class="faq-item" id="where-stored">
             <summary>Where is my data stored?</summary>
             <div class="faq-answer">
-              <p>On your phone, and in your own iCloud or Google Drive if you turn on backup. AutoEase has no accounts and no server that holds your data.</p>
+              <p>On your phone, and in your own iCloud or Google Drive if you turn on backup. AutoEase has no accounts and no server that holds your data. On Android, if your phone’s own Google backup is on, Android may also save AutoEase’s data with the rest of your phone and bring it back when you reinstall or set up a new phone.</p>
             </div>
           </details>
           <details class="faq-item" id="what-leaves">
@@ -874,7 +874,7 @@
           <details class="faq-item" id="delete">
             <summary>How do I delete my data?</summary>
             <div class="faq-answer">
-              <p>Uninstalling AutoEase deletes everything it stored on your phone. A cloud backup stays in your iCloud or Google Drive until you delete it there. See <a href="/delete-data.html">Delete your AutoEase data</a>.</p>
+              <p>Uninstalling AutoEase deletes everything it stored on your phone. On Android, if your phone’s own Google backup is on, Android may also save AutoEase’s data with the rest of your phone and bring it back when you reinstall or set up a new phone. A cloud backup stays in your iCloud or Google Drive until you delete it there. See <a href="/delete-data.html">Delete your AutoEase data</a>.</p>
             </div>
           </details>
         </section>
@@ -895,13 +895,13 @@
           <details class="faq-item" id="no-recall-banner">
             <summary>I don’t see a recall banner. Is the check working?</summary>
             <div class="faq-answer">
-              <p>No banner means AutoEase found no recalls for your car’s make, model and year, or it couldn’t connect. Open the app again when you have a signal.</p>
+              <p>No banner means AutoEase found no recalls for your car’s make, model and year, or it couldn’t connect, or you’ve marked every recall as fixed. If you were offline, close AutoEase fully and reopen it when you have a signal.</p>
             </div>
           </details>
           <details class="faq-item" id="mileage-invalid">
             <summary>My mileage won’t save.</summary>
             <div class="faq-answer">
-              <p>Enter a whole number between 0 and 1,000,000, with no commas or decimals.</p>
+              <p>The new reading must be the same as or higher than your current mileage, up to 1,000,000. Odometers only count up, so AutoEase doesn’t accept a lower number. If you entered a reading that was too high by mistake, email support and we’ll help.</p>
             </div>
           </details>
           <details class="faq-item" id="contact">
