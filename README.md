@@ -29,7 +29,7 @@ Screenshots come from `store/app-store/screenshots/iphone-6.3/` in the app repo,
 
 - **Analytics:** add the GTM container. Each page has two marker comments, `<!-- GTM head: … -->` (first thing in `<head>`) and `<!-- GTM body: … -->` (first thing in `<body>`); replace them with the container's `<script>` and `<noscript>` snippets. GA4 is configured in the container, not in the HTML. The privacy policy already describes GA4 on the site. Then add a CI check for the container id, as on glowscroll.lixlink.com
 - **Store links:** when the apps are live, replace the "Coming soon" download section with App Store and Google Play badges, add `downloadUrl` to the MobileApplication JSON-LD, the Smart App Banner (`apple-itunes-app`) to every page except `404.html`, update "Where can I download AutoEase?" in the FAQ, and the status line in `llms.txt`
-- **Still to check on a device:** restoring a backup on a new phone (the app asks to add a car before Backup is reachable, so check what the Garage shows after restoring)
+- **Still to check on a device:** the restore-on-a-new-phone flow (Welcome → Restore from a backup) the Help Center describes in `faq.html#restore`; it's in the app's `docs/uat-plan.md`
 
 ## Deployment
 
