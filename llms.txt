@@ -1,0 +1,33 @@
+# AutoEase: Car Maintenance
+
+> AutoEase is a free car maintenance app for iPhone and Android, made by THE LIX GROUP LLC. The user scans their car's VIN once (or types it) and enters the odometer reading; AutoEase then shows a green / yellow / red status for each service, reminds them before a service is due, and checks for open safety recalls from NHTSA. It also keeps a service log (with optional costs and CSV export), a fuel/MPG log and a to-fix list. There is no account, no ads and no tracking in the app; data is stored on the phone, with optional backup to the user's own iCloud or Google Drive. Status: in testing, coming soon to the App Store and Google Play (US).
+
+## Key facts
+
+- Platforms: iPhone (App Store) and Android (Google Play). Coming soon; not yet on either store
+- Region: cars, trucks and SUVs sold in the US; miles and gallons
+- Price: free, no ads. The first car, its reminders, recall alerts and backup are free forever
+- Account required: No
+- Cars per phone: one (today)
+- Setup: about a minute. Scan the VIN barcode on the driver's door jamb sticker (or type the VIN), enter mileage, allow notifications
+- Status colors: Good (green) = nothing needed; Soon (yellow) = due within 30 days or 500 miles; Overdue (red) = at or past the interval in miles or time
+- Services tracked and starting intervals (whichever comes first): oil change 7,500 mi / 6 months (10,000 mi / 12 months for Toyota, Ford, BMW, Mercedes-Benz; 5,000 mi / 6 months for Nissan, Subaru); tire rotation 7,500 mi / 6 months; brake inspection 12,000 mi / 12 months; engine air filter 15,000 mi / 12 months. General intervals, not a trim-specific factory schedule
+- Reminders: local notifications about a week before a service is due by date, and immediately when a mileage update makes a service due soon or overdue. Never promotional
+- Recalls: checked live against NHTSA by make, model and year each time the dashboard opens (not by exact VIN, so users should confirm at nhtsa.gov/recalls)
+- Weather nudges (optional, off by default): Open-Meteo forecast for the approximate location; freeze at or below 32°F (check tire pressure), heat at or above 95°F (check coolant and battery). Location is never stored
+- Data that leaves the phone: VIN to NHTSA vPIC (to decode), make/model/year to NHTSA Recalls, approximate location to Open-Meteo (only if weather nudges are on). Nothing goes to an AutoEase server; there isn't one
+- Backup: automatic to the user's own iCloud (iPhone) or Google Drive app folder (Android, drive.appdata scope only), plus export/import of a backup file. Free
+- Support: autoease-support@lixlink.com
+
+## Pages
+
+- [Home](https://autoease.lixlink.com/): What AutoEase does, how the status works, privacy and pricing
+- [Help Center / FAQ](https://autoease.lixlink.com/faq.html): Setup, VIN scanning, status colors, reminders, service and fuel logs, to-fix list, recalls, weather alerts, backup and restore, privacy, troubleshooting
+- [Privacy Policy](https://autoease.lixlink.com/privacy.html): What data AutoEase handles and where it goes
+- [Delete your data](https://autoease.lixlink.com/delete-data.html): How to delete on-device data and cloud backups
+
+## Guides
+
+- [Where to find your car's VIN](https://autoease.lixlink.com/guides/find-your-vin.html): VIN locations and what each of the 17 characters means
+- [How often to service your car](https://autoease.lixlink.com/guides/car-maintenance-schedule.html): Typical intervals for oil, tires, brakes, filters and more
+- [How to check for car recalls](https://autoease.lixlink.com/guides/check-car-recalls.html): Check by VIN at NHTSA; recall repairs are free
