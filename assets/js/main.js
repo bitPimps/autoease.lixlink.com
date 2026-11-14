@@ -1,4 +1,5 @@
-// Mobile nav toggle, back-to-top button and Help Center search.
+// Mobile nav toggle, back-to-top button, Help Center search, and on the
+// home page the hero lamp's replay and the screenshot carousel.
 // Same behavior as glowscroll.lixlink.com's main.js, plus: a link to a
 // question's #id (e.g. from in-app help) opens that question.
 document.addEventListener('DOMContentLoaded', () => {
@@ -103,8 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
       let i = Math.min(items.length - 1, Math.max(0, (target ?? nearest()) + sign));
       // Past the last reachable position, more steps don't move the track.
       while (i > 0 && offsetOf(i - 1) >= maxScroll()) i--;
+      // Already there: no scroll event will come to clear the target.
+      if (Math.abs(track.scrollLeft - offsetOf(i)) < 1) { target = null; return; }
       target = i;
       track.scrollTo({ left: offsetOf(i), behavior: scrollBehavior() });
+      // Backstop in case the scroll is cut short without any scroll event.
+      clearTimeout(settle);
+      settle = setTimeout(() => { target = null; }, 1000);
     };
     prev.addEventListener('click', () => go(-1));
     next.addEventListener('click', () => go(1));
@@ -116,23 +122,30 @@ document.addEventListener('DOMContentLoaded', () => {
       const focused = document.activeElement;
       prev.disabled = !before;
       next.disabled = !after;
-      if (focused === prev && prev.disabled && !next.disabled) next.focus();
-      if (focused === next && next.disabled && !prev.disabled) prev.focus();
+      // If both are off (everything fits), hand it to the track itself.
+      if ((focused === prev || focused === next) && focused.disabled) {
+        (prev.disabled ? (next.disabled ? track : next) : prev).focus();
+      }
       carousel.classList.toggle('more-before', before);
       carousel.classList.toggle('more-after', after);
     };
+    // Layout reads once per frame, not once per scroll event.
+    let frame = 0;
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(() => { frame = 0; update(); });
+    };
     track.addEventListener('scroll', () => {
-      update();
+      scheduleUpdate();
       clearTimeout(settle);
       settle = setTimeout(() => { target = null; }, 150);
     }, { passive: true });
     if ('ResizeObserver' in window) {
-      const ro = new ResizeObserver(update);
+      const ro = new ResizeObserver(scheduleUpdate);
       ro.observe(track);
       items.forEach((item) => ro.observe(item));
     } else {
-      window.addEventListener('resize', update);
-      window.addEventListener('load', update);
+      window.addEventListener('resize', scheduleUpdate);
+      window.addEventListener('load', scheduleUpdate);
     }
     carousel.classList.add('is-enhanced');
     update();
