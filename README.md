@@ -18,7 +18,7 @@ JSON-LD lives in each page's `<head>` (Organization, WebSite, MobileApplication,
 
 ```
 assets/css/style.css   shared stylesheet; tokens match the app's design system (docs/design/README.md in the app repo)
-assets/js/main.js      mobile nav, back to top, Help Center search, open a question from its #id
+assets/js/main.js      mobile nav, back to top, Help Center search, open a question from its #id, hero lamp replay, screenshot carousel
 assets/fonts/          self-hosted Big Shoulders Display, IBM Plex Sans, IBM Plex Mono (OFL), latin subset
 assets/img/            favicons, app icon, og-image.png (1200×630), screens/*.webp (the App Store 6.3" screenshots)
 ```
