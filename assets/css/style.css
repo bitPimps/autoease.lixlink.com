@@ -203,15 +203,43 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   content: ''; position: absolute; left: 21%; top: 11%; width: 58%; height: 26%;
   border-radius: 50%; background: rgba(255, 255, 255, 0.28);
 }
+/* Gauge self-check. Anywhere (404): red → amber → green once, then settle.
+   Hero: one slower pass (about 1.2s red, 1.2s amber, then green), with the
+   legend lighting the matching label in step (same duration and delay).
+   The whole run stays under 5s, so it needs no pause control (WCAG 2.2.2);
+   main.js replays it when the lamp is hovered or tapped. Reduced motion:
+   a steady green lamp and a plain legend. */
 @media (prefers-reduced-motion: no-preference) {
   .telltale .lamp { animation: self-check 2.4s ease-out 0.3s both; }
+  .hero .telltale .lamp { animation: self-check-hero 4.6s ease-in-out 0.3s both; }
+  .hero .legend li,
+  .hero .legend .dot { animation-duration: 4.6s; animation-timing-function: ease-in-out; animation-delay: 0.3s; animation-fill-mode: both; }
+  .hero .legend li:nth-child(1) { animation-name: label-good; }
+  .hero .legend li:nth-child(2) { animation-name: label-soon; }
+  .hero .legend li:nth-child(3) { animation-name: label-overdue; }
+  .hero .legend li:nth-child(1) .dot { animation-name: dot-good; }
+  .hero .legend li:nth-child(2) .dot { animation-name: dot-soon; }
+  .hero .legend li:nth-child(3) .dot { animation-name: dot-overdue; }
 }
-/* Gauge self-check: red → amber → green, then settle. */
 @keyframes self-check {
   0%   { background: radial-gradient(circle at 50% 28%, #f2a0a0 0%, var(--overdue) 45%, #8f2a2a 100%); box-shadow: inset 0 -10px 24px rgba(0,0,0,.25), 0 0 40px rgba(209,67,67,.55); }
   33%  { background: radial-gradient(circle at 50% 28%, #f6d58f 0%, var(--soon) 45%, #8a5e0b 100%); box-shadow: inset 0 -10px 24px rgba(0,0,0,.25), 0 0 40px rgba(201,138,18,.55); }
   66%, 100% { background: radial-gradient(circle at 50% 28%, #8fe0b0 0%, var(--good) 45%, #1f6b42 100%); box-shadow: inset 0 -10px 24px rgba(0,0,0,.25), 0 0 40px rgba(47,143,91,.55); }
 }
+@keyframes self-check-hero {
+  0%, 26%   { background: radial-gradient(circle at 50% 28%, #f2a0a0 0%, var(--overdue) 45%, #8f2a2a 100%); box-shadow: inset 0 -10px 24px rgba(0,0,0,.25), 0 0 40px rgba(209,67,67,.55); }
+  28%, 52%  { background: radial-gradient(circle at 50% 28%, #f6d58f 0%, var(--soon) 45%, #8a5e0b 100%); box-shadow: inset 0 -10px 24px rgba(0,0,0,.25), 0 0 40px rgba(201,138,18,.55); }
+  54%, 100% { background: radial-gradient(circle at 50% 28%, #8fe0b0 0%, var(--good) 45%, #1f6b42 100%); box-shadow: inset 0 -10px 24px rgba(0,0,0,.25), 0 0 40px rgba(47,143,91,.55); }
+}
+/* Labels only switch between muted and bright (both well above 4.5:1);
+   the dots carry the dimming. Every keyframe sets its value so nothing
+   drifts between phases. */
+@keyframes label-overdue { 0%, 26% { color: var(--on-dark); } 28%, 100% { color: var(--on-dark-muted); } }
+@keyframes label-soon    { 0%, 26% { color: var(--on-dark-muted); } 28%, 52% { color: var(--on-dark); } 54%, 100% { color: var(--on-dark-muted); } }
+@keyframes label-good    { 0%, 52% { color: var(--on-dark-muted); } 54%, 100% { color: var(--on-dark); } }
+@keyframes dot-overdue { 0%, 26% { opacity: 1; } 28%, 100% { opacity: 0.35; } }
+@keyframes dot-soon    { 0%, 26% { opacity: 0.35; } 28%, 52% { opacity: 1; } 54%, 100% { opacity: 0.35; } }
+@keyframes dot-good    { 0%, 52% { opacity: 0.35; } 54%, 100% { opacity: 1; } }
 
 .legend { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: var(--on-dark-muted); }
 .legend li { display: flex; align-items: center; gap: 8px; }
@@ -285,6 +313,35 @@ td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-spa
 }
 .shots li { flex: 0 0 230px; scroll-snap-align: start; }
 .shots img { width: 230px; height: auto; border-radius: 18px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); }
+
+/* Carousel: main.js adds .is-enhanced and the arrow buttons. Without JS the
+   strip above keeps its scrollbar. The track stays a scroll-snap list, so
+   swipe, trackpad and arrow keys work as before. */
+.carousel { position: relative; }
+.carousel.is-enhanced .shots { scrollbar-width: none; }
+/* The edge-fade mask would hide an outside focus ring; draw it inside. */
+.carousel.is-enhanced .shots:focus-visible { outline-offset: -3px; border-radius: 18px; }
+.carousel.is-enhanced .shots::-webkit-scrollbar { display: none; }
+.carousel.is-enhanced.more-after .shots { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
+.carousel.is-enhanced.more-before .shots { -webkit-mask-image: linear-gradient(to left, #000 85%, transparent); mask-image: linear-gradient(to left, #000 85%, transparent); }
+.carousel.is-enhanced.more-before.more-after .shots { -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent); mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent); }
+.carousel-btn {
+  position: absolute; top: calc(50% - 26px); z-index: 1;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer;
+  background: var(--asphalt-2); color: var(--on-dark);
+  border: 1px solid var(--asphalt-line); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.2s, background 0.2s;
+}
+.carousel-btn:hover { background: var(--instrument); }
+.carousel-btn:focus-visible { outline: 2px solid var(--on-dark); outline-offset: 2px; }
+.carousel-btn[disabled] { opacity: 0; pointer-events: none; }
+.carousel-btn.prev { left: -12px; }
+.carousel-btn.next { right: -12px; }
+@media (max-width: 600px) {
+  .carousel-btn.prev { left: 0; }
+  .carousel-btn.next { right: 0; }
+}
 
 /* Privacy band */
 .band-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
