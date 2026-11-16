@@ -62,7 +62,7 @@
       "about": {
         "@id": "https://autoease.lixlink.com/#app"
       },
-      "dateModified": "2026-11-14",
+      "dateModified": "2026-11-16",
       "inLanguage": "en-US"
     },
     {
@@ -115,7 +115,7 @@
       </div>
     </div>
     <article class="wrap content-page">
-    <p class="updated">Last updated November 14, 2026</p>
+    <p class="updated">Last updated November 16, 2026</p>
     <p>
       AutoEase (“the app”) is made by THE LIX GROUP LLC (“we”). AutoEase is local-first: we don’t
       run a server for your data, there’s no account system, and we don’t collect your vehicle
@@ -137,11 +137,12 @@
       <li><strong>Your VIN</strong> goes to the U.S. National Highway Traffic Safety Administration (NHTSA) vPIC service when you add your car, to look up its year, make and model.</li>
       <li><strong>Your car’s make, model and year</strong> go to NHTSA’s recalls service when you open or return to the app, or pull down on the Garage, to check for safety recalls.</li>
       <li><strong>Your approximate location</strong> goes to <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>, only if you turn on Weather Alerts, to fetch the local forecast. It’s read once per check, never stored on your phone or in a backup, and discarded after the request.</li>
+      <li><strong>A random app ID and your AutoEase Plus purchase record</strong> go to RevenueCat, which checks whether this phone has AutoEase Plus. See <a href="#plus">AutoEase Plus purchases</a>.</li>
     </ul>
     <p>
       These services receive the request like any website receives a visit (including your IP
-      address), under their own terms. None of these requests include your mileage, service
-      history, costs or notes, and we don’t receive any of them.
+      address), under their own terms. None of these requests include your car’s details, mileage,
+      service history, costs or notes beyond what’s listed above.
     </p>
 
     <h2 id="backup">Backup and files you share</h2>
@@ -165,6 +166,25 @@
       where you choose to save or send them.
     </p>
 
+    <h2 id="plus">AutoEase Plus purchases</h2>
+    <p>
+      AutoEase Plus is an optional one-time purchase, bought through the App Store or Google Play.
+      Apple or Google handles the payment; we never see your card or payment details. To unlock
+      Plus, restore it on a new phone and notice refunds, AutoEase uses
+      <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat</a>, a service that
+      processes purchases on our behalf.
+    </p>
+    <p>
+      While AutoEase runs, it checks with RevenueCat whether this phone has Plus (when it starts,
+      and when you open AutoEase Plus). RevenueCat identifies the install by a random ID it creates, not by your name, email
+      or Apple or Google account. Along with the ID it records basic technical details (such as country,
+      platform, app version and when it was last seen). If you buy Plus, RevenueCat also keeps the
+      store’s record of that purchase (product, price, date and the store’s transaction ID). RevenueCat never receives
+      your car’s details, mileage, history or notes. We use this information only to provide
+      Plus and to count purchases; it isn’t used for advertising, sold or shared for any other
+      purpose.
+    </p>
+
     <h2 id="permissions">Permissions</h2>
     <ul>
       <li><strong>Camera:</strong> to read the VIN barcode. No photos are taken or kept. You can type the VIN instead.</li>
@@ -174,12 +194,14 @@
     <p>AutoEase never asks for your contacts, microphone or photo library.</p>
 
     <h2 id="accounts">Accounts and identity</h2>
-    <p>AutoEase doesn’t ask for your name, email address or any other identifying information. There’s no login and no account system.</p>
+    <p>AutoEase doesn’t ask for your name, email address or any other identifying information. There’s no login and no account system. AutoEase itself assigns no ID; RevenueCat uses a random install ID for <a href="#plus">AutoEase Plus</a>. On Android, linking Google Drive signs in with your own Google account only to reach your backup (see <a href="#backup">Backup</a>).</p>
 
     <h2 id="analytics">Analytics and advertising</h2>
     <p>
-      The AutoEase app has no ads and doesn’t include analytics or advertising tools. It doesn’t
-      track how you use it, and we never sell or share your data.
+      The AutoEase app has no ads and no advertising or usage-analytics tools. It doesn’t track how
+      you use it, and we never sell or share your data. The only figures we see come from
+      RevenueCat’s purchase records, such as how many people bought Plus; they don’t record how
+      you use the app.
     </p>
     <p>
       This website works differently. It uses Google Analytics 4, loaded through Google Tag
@@ -194,11 +216,13 @@
     <p>
       To delete one car and its history, use Remove this car (see <a href="/delete-data.html#one-car">Delete one car</a>).
       Uninstalling AutoEase deletes everything it stored on your phone. A cloud backup stays in your
-      iCloud or Google Drive until you delete it there. See <a href="/delete-data.html">Delete your AutoEase data</a>.
+      iCloud or Google Drive until you delete it there. To have your AutoEase Plus purchase record
+      deleted from RevenueCat, email us (see <a href="/delete-data.html#us">Data we hold</a>).
+      See <a href="/delete-data.html">Delete your AutoEase data</a>.
     </p>
 
     <h2 id="children">Children’s privacy</h2>
-    <p>AutoEase isn’t directed at children and doesn’t knowingly collect information from anyone, of any age.</p>
+    <p>AutoEase isn’t directed at children and doesn’t knowingly collect personal information from children.</p>
 
     <h2 id="changes">Changes to this policy</h2>
     <p>If this policy changes, for example because a new feature changes how data is handled, we’ll update this page and the date above before that feature ships.</p>

@@ -6,7 +6,7 @@
 
 - Platforms: iPhone (App Store) and Android (Google Play). Coming soon; not yet on either store
 - Region: cars, trucks and SUVs sold in the US; miles and gallons
-- Price: free, no ads. The first car, its reminders, recall alerts and backup are free forever
+- Price: free to download, no ads. The first car, its reminders, recall alerts and backup are free forever. AutoEase Plus is an optional one-time in-app purchase (no subscription) for more than one car and a Resale Report PDF
 - Account required: No
 - Cars per phone: one (today)
 - Setup: about a minute. Scan the VIN barcode on the driver's door jamb sticker (or type the VIN), enter mileage, allow notifications
