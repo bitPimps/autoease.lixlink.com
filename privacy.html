@@ -175,10 +175,11 @@
       processes purchases on our behalf.
     </p>
     <p>
-      Each time AutoEase opens, it asks RevenueCat whether this phone has Plus. RevenueCat
-      identifies the phone by a random ID it creates for the app install, not by your name, email
-      or Apple or Google account. If you buy Plus, RevenueCat also keeps the store’s record of that
-      purchase (product, price, date and the store’s transaction ID). RevenueCat never receives
+      While AutoEase runs, it checks with RevenueCat whether this phone has Plus (when it starts,
+      and when you open AutoEase Plus). RevenueCat identifies the install by a random ID it creates, not by your name, email
+      or Apple or Google account. Along with the ID it records basic technical details (such as country,
+      platform, app version and when it was last seen). If you buy Plus, RevenueCat also keeps the
+      store’s record of that purchase (product, price, date and the store’s transaction ID). RevenueCat never receives
       your car’s details, mileage, history or notes. We use this information only to provide
       Plus and to count purchases; it isn’t used for advertising, sold or shared for any other
       purpose.
@@ -193,13 +194,14 @@
     <p>AutoEase never asks for your contacts, microphone or photo library.</p>
 
     <h2 id="accounts">Accounts and identity</h2>
-    <p>AutoEase doesn’t ask for your name, email address or any other identifying information. There’s no login and no account system. The only ID involved is the random app ID RevenueCat uses for <a href="#plus">AutoEase Plus</a>.</p>
+    <p>AutoEase doesn’t ask for your name, email address or any other identifying information. There’s no login and no account system. AutoEase itself assigns no ID; RevenueCat uses a random install ID for <a href="#plus">AutoEase Plus</a>. On Android, linking Google Drive signs in with your own Google account only to reach your backup (see <a href="#backup">Backup</a>).</p>
 
     <h2 id="analytics">Analytics and advertising</h2>
     <p>
-      The AutoEase app has no ads and doesn’t include analytics or advertising tools. It doesn’t
-      track how you use it, and we never sell or share your data. RevenueCat’s purchase records
-      let us count how many people bought Plus; they don’t record how you use the app.
+      The AutoEase app has no ads and no advertising or usage-analytics tools. It doesn’t track how
+      you use it, and we never sell or share your data. The only figures we see come from
+      RevenueCat’s purchase records, such as how many people bought Plus; they don’t record how
+      you use the app.
     </p>
     <p>
       This website works differently. It uses Google Analytics 4, loaded through Google Tag
