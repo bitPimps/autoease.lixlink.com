@@ -8,7 +8,7 @@
 - Region: cars, trucks and SUVs sold in the US; miles and gallons
 - Price: free to download, no ads. The first car, its reminders, recall alerts and backup are free forever. AutoEase Plus is an optional one-time in-app purchase (no subscription) for more than one car and a Resale Report PDF
 - Account required: No
-- Cars per phone: one (today)
+- Cars per phone: one free; more with AutoEase Plus, switched between on the Garage (tap the car's name, or swipe)
 - Setup: about a minute. Scan the VIN barcode on the driver's door jamb sticker (or type the VIN), enter mileage, allow notifications
 - Status colors: Good (green) = nothing needed; Soon (yellow) = due within 30 days or 500 miles; Overdue (red) = at or past the interval in miles or time
 - Services tracked and starting intervals (whichever comes first): oil change 7,500 mi / 6 months (10,000 mi / 12 months for Toyota, Ford, BMW, Mercedes-Benz; 5,000 mi / 6 months for Nissan, Subaru); tire rotation 7,500 mi / 6 months; brake inspection 12,000 mi / 12 months; engine air filter 15,000 mi / 12 months. General intervals, not a trim-specific factory schedule. Users can change any interval (for example to their owner's manual or its severe schedule) and reset it to the default, add their own services (suggestions: cabin air filter, wiper blades, brake fluid, battery check, coolant, transmission fluid) and remove any service; its service history stays
