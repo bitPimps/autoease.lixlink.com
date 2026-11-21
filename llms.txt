@@ -1,6 +1,6 @@
 # AutoEase: Car Maintenance
 
-> AutoEase is a free car maintenance app for iPhone and Android, made by THE LIX GROUP LLC. The user scans their car's VIN once (or types it) and enters the odometer reading; AutoEase then shows a green / yellow / red status for each service, reminds them before a service is due, and checks for open safety recalls from NHTSA. It also keeps a service log (with optional costs and CSV export), a fuel/MPG log and a to-fix list. There is no account, no ads and no tracking in the app; data is stored on the phone, with optional backup to the user's own iCloud or Google Drive. Status: available on Google Play (US); coming soon to the App Store.
+> AutoEase is a free car maintenance app for Android (iPhone coming soon), made by THE LIX GROUP LLC. The user scans their car's VIN once (or types it) and enters the odometer reading; AutoEase then shows a green / yellow / red status for each service, reminds them before a service is due, and checks for open safety recalls from NHTSA. It also keeps a service log (with optional costs and CSV export), a fuel/MPG log and a to-fix list. There is no account, no ads and no tracking in the app; data is stored on the phone, with optional backup to the user's own iCloud or Google Drive. Status: available on Google Play (US); coming soon to the App Store.
 
 ## Key facts
 
