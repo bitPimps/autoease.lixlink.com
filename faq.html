@@ -171,7 +171,7 @@
           "name": "Which services does AutoEase track?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oil change, tire rotation, brake inspection and engine air filter. Each one is checked by miles and by months, whichever comes first."
+            "text": "Oil change, tire rotation, brake inspection and engine air filter to start. Each one is checked by miles and by months, whichever comes first. You can add your own, like a cabin air filter or coolant, and remove any you don’t need."
           }
         },
         {
@@ -179,7 +179,23 @@
           "name": "Where do the service intervals come from?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AutoEase starts with conservative intervals that suit most passenger vehicles: oil change and tire rotation every 7,500 miles or 6 months, brake inspection every 12,000 miles or 12 months, and air filter every 15,000 miles or 12 months. The oil change is adjusted for some makes: 10,000 miles or 12 months for Toyota, Ford, BMW and Mercedes-Benz, and 5,000 miles or 6 months for Nissan and Subaru. These are general intervals, not your car’s exact factory schedule, so if your owner’s manual says sooner, go by that."
+            "text": "AutoEase starts with conservative intervals that suit most passenger vehicles: oil change and tire rotation every 7,500 miles or 6 months, brake inspection every 12,000 miles or 12 months, and air filter every 15,000 miles or 12 months. The oil change is adjusted for some makes: 10,000 miles or 12 months for Toyota, Ford, BMW and Mercedes-Benz, and 5,000 miles or 6 months for Nissan and Subaru. These are general intervals, not your car’s exact factory schedule, so if your owner’s manual says different, change the interval to match."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change a service’s interval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On the Garage tab, tap the service, then tap Edit next to its interval and enter the miles and months from your owner’s manual. If you mostly make short trips, tow, or drive in extreme heat, cold or dust, use the manual’s severe schedule. For the four starting services, Reset to default puts the starting interval back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add or remove a service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On the Garage tab, tap Add item below your services, pick a suggestion like Cabin Air Filter or Coolant or type your own, and set how often it’s due and when it was last done. To remove a service, tap it, tap Edit, then Remove this item. Its past services stay in your service log."
           }
         },
         {
@@ -187,7 +203,7 @@
           "name": "I just set up the app. Why is everything green?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AutoEase starts every service as if it was just done at the mileage you entered. If you know a service is due or overdue, get it done, then tap it on the Garage tab and tap Mark as Done so its clock starts from the right point."
+            "text": "AutoEase starts every service as if it was just done at the mileage you entered. To fix that, tap the “When was each service last done?” card on the Garage tab and enter the mileage and date for the services you know. Leave the rest blank. If the card is gone, tap a service and Mark as Done with the mileage and date it was last done."
           }
         },
         {
@@ -203,7 +219,7 @@
           "name": "How do I mark a service as done?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On the Garage tab, tap the service, add what it cost if you like, and tap Mark as Done. Its clock restarts from today and your current mileage, and the job is added to your service log."
+            "text": "On the Garage tab, tap the service. It fills in today and your current mileage; change them if it was done earlier. Add what it cost if you like, then tap Mark as Done. Its clock restarts from that mileage and date, and the job is added to your service log."
           }
         },
         {
@@ -211,7 +227,7 @@
           "name": "What is the on-time streak?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "When you mark services done before they become overdue, AutoEase counts them. Once you have two or more on-time services in a row, a streak badge appears on the dashboard."
+            "text": "When you mark services done before they become overdue, AutoEase counts them. Once you have two or more on-time services in a row, a streak badge appears on the dashboard. Services you enter on “When was each service last done?” aren’t marked on time or late, so the streak starts with the next service you mark done."
           }
         },
         {
@@ -251,7 +267,7 @@
           "name": "What’s in the service log?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every service you mark as done: what it was, the date, the mileage, the cost if you entered one, and whether it was done on time. Recalls you mark as fixed show there too, with the recall’s NHTSA campaign number and the date you marked it; they have no cost and don’t count toward your total. The Service tab also shows your lifetime total spent."
+            "text": "Every service you mark as done: what it was, the date, the mileage, the cost if you entered one, and whether it was done on time. Services you enter on “When was each service last done?” show there too, without an on-time mark. Recalls you mark as fixed show there too, with the recall’s NHTSA campaign number and the date you marked it; they have no cost and don’t count toward your total. The Service tab also shows your lifetime total spent."
           }
         },
         {
@@ -660,19 +676,31 @@
           <details class="faq-item" id="services">
             <summary>Which services does AutoEase track?</summary>
             <div class="faq-answer">
-              <p>Oil change, tire rotation, brake inspection and engine air filter. Each one is checked by miles and by months, whichever comes first.</p>
+              <p>Oil change, tire rotation, brake inspection and engine air filter to start. Each one is checked by miles and by months, whichever comes first. You can add your own, like a cabin air filter or coolant, and remove any you don’t need.</p>
             </div>
           </details>
           <details class="faq-item" id="intervals">
             <summary>Where do the service intervals come from?</summary>
             <div class="faq-answer">
-              <p>AutoEase starts with conservative intervals that suit most passenger vehicles: oil change and tire rotation every 7,500 miles or 6 months, brake inspection every 12,000 miles or 12 months, and air filter every 15,000 miles or 12 months. The oil change is adjusted for some makes: 10,000 miles or 12 months for Toyota, Ford, BMW and Mercedes-Benz, and 5,000 miles or 6 months for Nissan and Subaru. These are general intervals, not your car’s exact factory schedule, so if your owner’s manual says sooner, go by that.</p>
+              <p>AutoEase starts with conservative intervals that suit most passenger vehicles: oil change and tire rotation every 7,500 miles or 6 months, brake inspection every 12,000 miles or 12 months, and air filter every 15,000 miles or 12 months. The oil change is adjusted for some makes: 10,000 miles or 12 months for Toyota, Ford, BMW and Mercedes-Benz, and 5,000 miles or 6 months for Nissan and Subaru. These are general intervals, not your car’s exact factory schedule, so if your owner’s manual says different, change the interval to match.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="change-interval">
+            <summary>Can I change a service’s interval?</summary>
+            <div class="faq-answer">
+              <p>Yes. On the Garage tab, tap the service, then tap Edit next to its interval and enter the miles and months from your owner’s manual. If you mostly make short trips, tow, or drive in extreme heat, cold or dust, use the manual’s severe schedule. For the four starting services, Reset to default puts the starting interval back.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="custom-services">
+            <summary>Can I add or remove a service?</summary>
+            <div class="faq-answer">
+              <p>Yes. On the Garage tab, tap Add item below your services, pick a suggestion like Cabin Air Filter or Coolant or type your own, and set how often it’s due and when it was last done. To remove a service, tap it, tap Edit, then Remove this item. Its past services stay in your service log.</p>
             </div>
           </details>
           <details class="faq-item" id="all-green">
             <summary>I just set up the app. Why is everything green?</summary>
             <div class="faq-answer">
-              <p>AutoEase starts every service as if it was just done at the mileage you entered. If you know a service is due or overdue, get it done, then tap it on the Garage tab and tap Mark as Done so its clock starts from the right point.</p>
+              <p>AutoEase starts every service as if it was just done at the mileage you entered. To fix that, tap the “When was each service last done?” card on the Garage tab and enter the mileage and date for the services you know. Leave the rest blank. If the card is gone, tap a service and Mark as Done with the mileage and date it was last done.</p>
             </div>
           </details>
           <details class="faq-item" id="update-mileage">
@@ -684,13 +712,13 @@
           <details class="faq-item" id="mark-done">
             <summary>How do I mark a service as done?</summary>
             <div class="faq-answer">
-              <p>On the Garage tab, tap the service, add what it cost if you like, and tap Mark as Done. Its clock restarts from today and your current mileage, and the job is added to your service log.</p>
+              <p>On the Garage tab, tap the service. It fills in today and your current mileage; change them if it was done earlier. Add what it cost if you like, then tap Mark as Done. Its clock restarts from that mileage and date, and the job is added to your service log.</p>
             </div>
           </details>
           <details class="faq-item" id="streak">
             <summary>What is the on-time streak?</summary>
             <div class="faq-answer">
-              <p>When you mark services done before they become overdue, AutoEase counts them. Once you have two or more on-time services in a row, a streak badge appears on the dashboard.</p>
+              <p>When you mark services done before they become overdue, AutoEase counts them. Once you have two or more on-time services in a row, a streak badge appears on the dashboard. Services you enter on “When was each service last done?” aren’t marked on time or late, so the streak starts with the next service you mark done.</p>
             </div>
           </details>
         </section>
@@ -726,7 +754,7 @@
           <details class="faq-item" id="whats-logged">
             <summary>What’s in the service log?</summary>
             <div class="faq-answer">
-              <p>Every service you mark as done: what it was, the date, the mileage, the cost if you entered one, and whether it was done on time. Recalls you mark as fixed show there too, with the recall’s NHTSA campaign number and the date you marked it; they have no cost and don’t count toward your total. The Service tab also shows your lifetime total spent.</p>
+              <p>Every service you mark as done: what it was, the date, the mileage, the cost if you entered one, and whether it was done on time. Services you enter on “When was each service last done?” show there too, without an on-time mark. Recalls you mark as fixed show there too, with the recall’s NHTSA campaign number and the date you marked it; they have no cost and don’t count toward your total. The Service tab also shows your lifetime total spent.</p>
             </div>
           </details>
           <details class="faq-item" id="export-csv">
