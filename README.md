@@ -20,7 +20,7 @@ JSON-LD lives in each page's `<head>` (Organization, WebSite, MobileApplication,
 assets/css/style.css   shared stylesheet; tokens match the app's design system (docs/design/README.md in the app repo)
 assets/js/main.js      mobile nav, back to top, Help Center search, open a question from its #id, hero lamp replay, screenshot carousel
 assets/fonts/          self-hosted Big Shoulders Display, IBM Plex Sans, IBM Plex Mono (OFL), latin subset
-assets/img/            favicons, app icon, og-image.png (1200×630), screens/*.webp (the App Store 6.3" screenshots)
+assets/img/            favicons, app icon, og-image.png (1200×630), badge-google-play.png, screens/*.webp (the App Store 6.3" screenshots)
 ```
 
 Screenshots come from `store/app-store/screenshots/iphone-6.3/` in the app repo, resized to 460×1000 WebP. Refresh them when the store screenshots change, and check the alt text in `index.html`.
@@ -28,7 +28,7 @@ Screenshots come from `store/app-store/screenshots/iphone-6.3/` in the app repo,
 ## Before launch
 
 - **Analytics:** add the GTM container. Each page has two marker comments, `<!-- GTM head: … -->` (first thing in `<head>`) and `<!-- GTM body: … -->` (first thing in `<body>`); replace them with the container's `<script>` and `<noscript>` snippets. GA4 is configured in the container, not in the HTML. The privacy policy already describes GA4 on the site. Then add a CI check for the container id, as on glowscroll.lixlink.com
-- **Store links:** when the apps are live, replace the "Coming soon" download section with App Store and Google Play badges, add `downloadUrl` to the MobileApplication JSON-LD, the Smart App Banner (`apple-itunes-app`) to every page except `404.html`, update "Where can I download AutoEase?" in the FAQ, and the status line in `llms.txt`
+- **Store links:** Google Play is live: the download section has its badge (UTM-tagged link, like glowscroll.lixlink.com), `downloadUrl` in the MobileApplication JSON-LD, the FAQ answer and `llms.txt`. When the App Store listing is approved: replace the "coming soon" pill with `badge-app-store.svg` (from glowscroll.lixlink.com) linking to `https://apps.apple.com/app/apple-store/id<APP_ID>?pt=129534275&ct=site_download&mt=8`, add it to `downloadUrl`, add the Smart App Banner (`apple-itunes-app`) to every page except `404.html`, and update "Where can I download AutoEase?" in the FAQ and `llms.txt`
 - **Still to check on a device:** the restore-on-a-new-phone flow (Welcome → Restore from a backup) the Help Center describes in `faq.html#restore`; it's in the app's `docs/uat-plan.md`
 
 ## Deployment
